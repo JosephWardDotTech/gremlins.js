@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+    - node # Current stable
+    - lts/* # Most recent LTS version
+
+install:
+    - npm ci
+
+script:
+    - npm run test
+    - npm run cypress:run
+
+branches:
+    only:
+        - master
+        - next
